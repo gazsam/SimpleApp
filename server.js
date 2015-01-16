@@ -8,11 +8,6 @@ var http = require("http"),
     sysinfo = require('./lib/sysinfo'),
     port = process.env.PORT || 8888;
 
-mime.define({
-   'text/css': ['css'],
-   'text/javascript': ['js'],
-   'image/jpeg': ['jpg', 'jpeg']
-});
 
 http.createServer(function(request, response) {
 
@@ -68,6 +63,7 @@ http.createServer(function(request, response) {
 
             response.writeHead(200);
             response.write(file, "binary");
+            reponse.contentType(filename);
             response.end();
         });
     });
