@@ -62,7 +62,6 @@ http.createServer(function(request, response) {
             }
 
             response.writeHead(200);
-            response.contentType(filename);
             response.write(file, "binary");
             response.end();
         });
