@@ -30,7 +30,7 @@ http.createServer(function(request, response) {
                 sys: sysinfo.sysInfo()
             };
             for (var item in process.env) {
-                if(item.key.indexOf('STACKATO') == -1)
+                if(item.indexOf('STACKATO') == -1)
                 {
                     v['env'].push({
                         'key': item,
