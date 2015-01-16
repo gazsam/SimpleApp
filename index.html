@@ -72,11 +72,13 @@
   <br/>
 
   {{#env}}
+  <% if(key.indexOf("STACKATO") > -1){ %>
   <div class="row display">
     <div class="three columns" > <p><b>{{key}}</b></p></div>
     <div class="eight columns offset-by-one" style="border-left: 2px solid #ccc"><p class="values"> {{{value}}} </p></div>
   </div>
   <br/>
+  <% } %>
   {{/env}}
 
   <div class="row display"><a name="system-info"></a>
