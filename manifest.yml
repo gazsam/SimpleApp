@@ -1,0 +1,4 @@
+applications:
+- name: node-env
+  description : Simple demo that prints the server's environment variables.
+  mem: 256M
