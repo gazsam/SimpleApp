@@ -8,6 +8,12 @@ var http = require("http"),
     sysinfo = require('./lib/sysinfo'),
     port = process.env.PORT || 8888;
 
+mime.define({
+   'text/css': ['css'],
+   'text/javascript': ['js'],
+   'image/jpeg': ['jpg', 'jpeg']
+});
+
 http.createServer(function(request, response) {
 
     var uri = url.parse(request.url).pathname,
