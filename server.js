@@ -43,7 +43,7 @@ http.createServer(function(request, response) {
             fs.readFile(t, 'utf8', function(err, data) {
                 var html = mustache.to_html(data, v);
                 response.writeHead(200);
-                reponse.contentType(request.params.file);
+                response.contentType(request.params.file);
                 response.write(html, "binary");
                 response.end()
                 return;
