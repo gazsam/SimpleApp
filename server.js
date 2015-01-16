@@ -62,8 +62,7 @@ http.createServer(function(request, response) {
             }
 
             response.writeHead(200);
-            console.log(request.params.file);
-            response.contentType(request.params.file.filename);
+            response.contentType("path/to/this.css");
             response.write(file, "binary");
             response.end();
         });
